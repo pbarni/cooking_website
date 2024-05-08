@@ -1,0 +1,19 @@
+:root {
+    --nav-initial-height: 30px; /* NEEDS CHANGE - scroll snapping */
+    --nav-padding-height: 20px;
+    --nav-navbar-height: calc(var(--nav-initial-height) + 2 * var(--nav-padding-height));
+    --base-font-size: 1em;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: var(--nav-navbar-height);
+}
+
+.container {
+    scroll-snap-align: start;
+}
+
+::selection {
+    background: wheat;
+}
